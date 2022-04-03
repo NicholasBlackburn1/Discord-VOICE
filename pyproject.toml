@@ -8,6 +8,7 @@ authors = ["NicholasBlackburn1 <nickblackburn02@gmail.com>"]
 python = "^3.8"
 colorama = "^0.4.4"
 pyVoIP = "^1.5.4"
+configparser = "^5.2.0"
 
 [tool.poetry.dev-dependencies]
 
