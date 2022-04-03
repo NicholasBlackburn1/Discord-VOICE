@@ -15,8 +15,8 @@ class voicehandler(object):
     phone : VoIPPhone
     
     #this starts the voip connection
-    def starting_connection(self,sipServer,sipPort,sipUser,sipPass,answer,ip):
-        self.phone = VoIPPhone(sipServer, sipPort, sipUser, sipPass, callCallback=answer, myIP=ip)
+    def starting_connection(self,sipServer,sipPort,sipUser,sipPass,ip):
+        self.phone = VoIPPhone(sipServer, sipPort, sipUser, sipPass, callCallback=self.answer, myIP=ip)
         self.phone.start()
 
         # answers phone 
@@ -28,7 +28,7 @@ class voicehandler(object):
             # this opens wave audio
             log.Warning("starting to read answer file")
 
-            f = wave.open('announcment.wav', 'rb')
+            f = wave.open(str(Path().absolute())+"data/audio/"+'announcment.wav', 'rb')
             frames = f.getnframes()
             data = f.readframes(frames)
             f.close()
@@ -73,7 +73,7 @@ class voicehandler(object):
                     
                     log.Warning("Playing owo.... ")
 
-                    f = wave.open('owo.wav', 'rb')
+                    f = wave.open(str(Path().absolute())+"data/audio/"+'owo.wav', 'rb')
                     frames = f.getnframes()
                     data = f.readframes(frames)
                     f.close()
