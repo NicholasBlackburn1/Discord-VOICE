@@ -14,6 +14,7 @@ def main():
     log.PipeLine_Ok("created voip connection...")
     
 
+    log.Warning("starting discord bot.....")
     #TODO: add discord cliet int
     log.PipeLine_Ok("started discord bot")
 
