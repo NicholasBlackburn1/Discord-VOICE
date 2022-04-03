@@ -1,0 +1,30 @@
+[[package]]
+name = "colorama"
+version = "0.4.4"
+description = "Cross-platform colored terminal text."
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+
+[[package]]
+name = "pyvoip"
+version = "1.5.4"
+description = "PyVoIP is a pure python VoIP/SIP/RTP library."
+category = "main"
+optional = false
+python-versions = ">=3.6"
+
+[metadata]
+lock-version = "1.1"
+python-versions = "^3.8"
+content-hash = "0fa257c51327d90ddaa310cf85be8c931bef1ae38a94650f7ff34e3f396b86d1"
+
+[metadata.files]
+colorama = [
+    {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
+    {file = "colorama-0.4.4.tar.gz", hash = "sha256:5941b2b48a20143d2267e95b1c2a7603ce057ee39fd88e7329b0c292aa16869b"},
+]
+pyvoip = [
+    {file = "pyVoIP-1.5.4-py3-none-any.whl", hash = "sha256:bd5294f9a263d0980e98ab0929a119576861f18c6927db680e9b3d9e19c89339"},
+    {file = "pyVoIP-1.5.4.tar.gz", hash = "sha256:6198c7976c2275e3c4f9236aca1283409330c030c08a24378cd7f0b0b52574dd"},
+]
