@@ -1,6 +1,6 @@
 """
 voice handler class uwu
-
+TODO: get the path lib to work for the pith
 """
 import configparser
 from re import S
@@ -33,6 +33,8 @@ class voicehandler(object):
             data = f.readframes(frames)
             f.close()
 
+            
+
             log.PipeLine_Ok("read file uwu")
 
             #awnsers call and writes the audio
@@ -55,6 +57,40 @@ class voicehandler(object):
                 dtmf = call.getDTMF()
                 if dtmf == "1":
                     log.Warning("connecting discord audio of main channel.....")
+                    #TODO: get discord connected to the voice audio
+
+
+                if dtmf == "2":
+                    log.Warning("connecting discord audio of game channel.....")
+                    #TODO: get discord connected to the vgame 
+
+                
+                if dtmf == "3":
+                    log.Warning("connecting discord audio of game channel.....")
+                    #TODO: get discord connected to the vgame 
+
+                else:
+                    
+                    log.Warning("Playing owo.... ")
+
+                    f = wave.open('owo.wav', 'rb')
+                    frames = f.getnframes()
+                    data = f.readframes(frames)
+                    f.close()
+
+                    log.Warning("writing audio.....")
+                    call.writeAudio(data) #This writes the audio data to the transmit buffer, this must be bytes.
+
+                    log.PipeLine_Ok("done playing audio ending call")
+
+                    # should end call
+                    if(time.time() <= stop and call.state == CallState.ANSWERED):
+                        log.Warning("ending call")
+                        call.hangup()
+                        log.PipeLine_Ok("ended call.")
+
+
+
 
               
 
